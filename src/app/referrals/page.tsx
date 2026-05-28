@@ -46,7 +46,7 @@ export default function ReferralsPage() {
     finally { setLoading(false); }
   };
 
-  const referralLink = user ? `${process.env.NEXT_PUBLIC_APP_URL || 'https://tapcash-production.up.railway.app'}/ref/${user.uid}` : '';
+  const referralLink = user ? `${process.env.NEXT_PUBLIC_APP_URL || 'https://tapcash.vercel.app'}/ref/${user.uid}` : '';
 
   const handleCopy = async () => {
     try { await navigator.clipboard.writeText(referralLink); setCopied(true); setTimeout(() => setCopied(false), 2000); }
